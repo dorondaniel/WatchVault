@@ -15,7 +15,8 @@ import com.doron.watchvault.MainActivity;
 import com.doron.watchvault.R;
 import com.doron.watchvault.network.AuthApi;
 import com.doron.watchvault.network.AuthApiService;
-import com.doron.watchvault.network.AuthModel;
+import com.doron.watchvault.network.models.AuthModel;
+import com.doron.watchvault.network.models.LoginResponseModel;
 
 import java.util.Objects;
 
@@ -56,7 +57,6 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-
     private void authentication(String email, String pass) {
         AuthApiService authApiService = AuthApi.authApiGetter();
 
@@ -64,15 +64,15 @@ public class LoginActivity extends AppCompatActivity {
         authModel.setUemail(email);
         authModel.setUpassword(pass);
 
-        Call<AuthModel> call = authApiService.loginUser(authModel);
+        Call<LoginResponseModel> call = authApiService.loginUser(authModel);
 
-        call.enqueue(new Callback<AuthModel>() {
+        call.enqueue(new Callback<LoginResponseModel>() {
             @Override
-            public void onResponse(@NonNull Call<AuthModel> call, @NonNull Response<AuthModel> response) {
+            public void onResponse(@NonNull Call<LoginResponseModel> call, @NonNull Response<LoginResponseModel> response) {
                 if (response.isSuccessful() && Objects.requireNonNull(response.body()).isFlag()) {
                     Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
                     // Get the user id
-                    Long userId = response.body().getUid();
+                    Long userId = response.body().getId();
 
                     SharedPreferences sharedPreferences = getSharedPreferences("Auth", MODE_PRIVATE);
                     SharedPreferences.Editor editor = sharedPreferences.edit();
@@ -88,7 +88,7 @@ public class LoginActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(@NonNull Call<AuthModel> call, @NonNull Throwable throwable) {
+            public void onFailure(@NonNull Call<LoginResponseModel> call, @NonNull Throwable throwable) {
                 String errorMessage = throwable.getMessage();
                 Toast.makeText(LoginActivity.this, errorMessage, Toast.LENGTH_LONG).show();
             }

@@ -1,6 +1,7 @@
 package com.doron.watchvault.network;
 
-import java.util.List;
+import com.doron.watchvault.network.models.AuthModel;
+import com.doron.watchvault.network.models.LoginResponseModel;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -9,7 +10,7 @@ import retrofit2.http.POST;
 public interface AuthApiService {
 
     @POST("auth/login")
-    Call<AuthModel> loginUser(@Body AuthModel authModel);
+    Call<LoginResponseModel> loginUser(@Body AuthModel authModel);
 
     @POST("/auth/save")
     Call<AuthModel> saveUser(@Body AuthModel authModel);

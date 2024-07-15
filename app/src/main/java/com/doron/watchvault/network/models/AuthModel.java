@@ -1,4 +1,4 @@
-package com.doron.watchvault.network;
+package com.doron.watchvault.network.models;
 
 public class AuthModel {
     private Long uid;

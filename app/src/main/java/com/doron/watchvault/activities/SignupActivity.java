@@ -16,9 +16,7 @@ import com.doron.watchvault.MainActivity;
 import com.doron.watchvault.R;
 import com.doron.watchvault.network.AuthApi;
 import com.doron.watchvault.network.AuthApiService;
-import com.doron.watchvault.network.AuthModel;
-
-import org.jetbrains.annotations.NotNull;
+import com.doron.watchvault.network.models.AuthModel;
 
 import retrofit2.Call;
 import retrofit2.Callback;
