@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <RelativeLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/des"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/logindes" />
+
+        <TextView
+            android:id="@+id/email_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/des"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/bebas"
+            android:letterSpacing="0.16"
+            android:text="e-mail"
+            android:textColor="@color/secondary"
+            android:textSize="24sp" />
+
+        <EditText
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:id="@+id/email_et"
+            android:layout_alignTop="@id/email_tv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/edittextcustom"
+            android:textAlignment="center"
+            android:fontFamily="@font/bebas"
+            android:inputType="text"
+            android:textColor="@color/secondary"
+            android:letterSpacing="0.16"
+            android:textColorHint="@color/primary"
+            android:hint="Enter email address" />
+
+        <TextView
+            android:id="@+id/pass_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/email_et"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="72dp"
+            android:fontFamily="@font/bebas"
+            android:letterSpacing="0.16"
+            android:text="password"
+            android:textColor="@color/secondary"
+            android:textSize="24sp" />
+
+        <EditText
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:layout_alignTop="@id/pass_tv"
+            android:id="@+id/pass_et"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/edittextcustom"
+            android:textAlignment="center"
+            android:fontFamily="@font/bebas"
+            android:inputType="textPassword"
+            android:textColorHint="@color/primary"
+            android:letterSpacing="0.16"
+            android:textColor="@color/secondary"
+            android:hint="Enter password" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="120dp"
+            android:layout_height="55dp"
+            android:id="@+id/login_btn"
+            android:layout_alignTop="@id/pass_et"
+            android:text="login"
+            android:fontFamily="@font/bebas"
+            android:letterSpacing="0.16"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/background"
+            android:layout_marginTop="72dp"
+            android:textSize="22sp"
+            android:background="@drawable/custombtn"/>
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/signup_tv"
+            android:layout_centerHorizontal="true"
+            android:layout_alignTop="@id/login_btn"
+            android:layout_marginTop="72dp"
+            android:text="signup"
+            android:fontFamily="@font/bebas"
+            android:letterSpacing="0.16"
+            android:textColor="@color/primary"
+            android:textStyle="italic"
+            android:textSize="22sp"/>
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

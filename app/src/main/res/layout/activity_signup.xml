@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background">
+
+    <RelativeLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:flow_horizontalBias="0.0">
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:id="@+id/back_img"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_margin="35dp"
+            android:src="@drawable/circle_chevron_left"
+            android:scaleType="fitXY"/>
+
+        <ImageView
+            android:id="@+id/des"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/signupdes" />
+
+        <TextView
+            android:id="@+id/fullname_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="130dp"
+            android:fontFamily="@font/bebas"
+            android:inputType="text"
+            android:letterSpacing="0.15"
+            android:minHeight="48dp"
+            android:text="FULL NAME"
+            android:textColor="@color/primary"
+            android:textSize="24sp" />
+
+        <EditText
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:id="@+id/fullname_et"
+            android:background="@drawable/edittextcustom"
+            android:gravity="center"
+            android:fontFamily="@font/bebas"
+            android:layout_centerHorizontal="true"
+            android:layout_alignTop="@+id/fullname_tv"
+            android:layout_marginTop="36dp"
+            android:inputType="text"
+            android:textColor="@color/primary"
+            android:letterSpacing="0.16"
+            android:elevation="10dp"
+            android:textColorHint="@color/secondary"
+            android:maxLength="30"
+            android:hint="Enter your name"/>
+
+        <TextView
+            android:id="@+id/email_sign_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/fullname_et"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="68dp"
+            android:fontFamily="@font/bebas"
+            android:inputType="text"
+            android:letterSpacing="0.15"
+            android:minHeight="48dp"
+            android:text="Email"
+            android:textColor="@color/primary"
+            android:textSize="24sp" />
+
+        <EditText
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:id="@+id/email_sign_et"
+            android:background="@drawable/edittextcustom"
+            android:gravity="center"
+            android:fontFamily="@font/bebas"
+            android:layout_centerHorizontal="true"
+            android:layout_alignTop="@+id/email_sign_tv"
+            android:layout_marginTop="36dp"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/primary"
+            android:maxLength="30"
+            android:letterSpacing="0.16"
+            android:elevation="10dp"
+            android:textColorHint="@color/secondary"
+            android:hint="Enter email address"/>
+
+        <TextView
+            android:id="@+id/pass_sign_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/email_sign_et"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="68dp"
+            android:fontFamily="@font/bebas"
+            android:inputType="text"
+            android:letterSpacing="0.15"
+            android:minHeight="48dp"
+            android:text="Password"
+            android:textColor="@color/primary"
+            android:textSize="24sp" />
+
+        <EditText
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:id="@+id/pass_sign_et"
+            android:background="@drawable/edittextcustom"
+            android:gravity="center"
+            android:fontFamily="@font/bebas"
+            android:layout_centerHorizontal="true"
+            android:layout_alignTop="@+id/pass_sign_tv"
+            android:layout_marginTop="36dp"
+            android:inputType="textPassword"
+            android:textColor="@color/primary"
+            android:letterSpacing="0.16"
+            android:maxLength="20"
+            android:elevation="10dp"
+            android:textColorHint="@color/secondary"
+            android:hint="Enter new password"/>
+
+        <TextView
+            android:id="@+id/pass_conf_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/pass_sign_et"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="68dp"
+            android:fontFamily="@font/bebas"
+            android:inputType="text"
+            android:letterSpacing="0.15"
+            android:minHeight="48dp"
+            android:text="confirm password"
+            android:textColor="@color/primary"
+            android:textSize="24sp" />
+
+        <EditText
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:id="@+id/pass_conf_et"
+            android:background="@drawable/edittextcustom"
+            android:gravity="center"
+            android:fontFamily="@font/bebas"
+            android:layout_centerHorizontal="true"
+            android:layout_alignTop="@+id/pass_conf_tv"
+            android:layout_marginTop="36dp"
+            android:inputType="textPassword"
+            android:textColor="@color/primary"
+            android:letterSpacing="0.16"
+            android:maxLength="20"
+            android:textColorHint="@color/secondary"
+            android:elevation="10dp"
+            android:hint="Enter password again"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="120dp"
+            android:layout_height="55dp"
+            android:id="@+id/signup_btn"
+            android:layout_alignTop="@id/pass_conf_et"
+            android:text="sign-up"
+            android:fontFamily="@font/bebas"
+            android:letterSpacing="0.16"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/background"
+            android:layout_marginTop="72dp"
+            android:textSize="22sp"
+            android:elevation="10dp"
+            android:translationZ="10dp"
+            android:background="@drawable/custom_sign_btn"/>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
